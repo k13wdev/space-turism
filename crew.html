@@ -50,25 +50,67 @@
   <main id="main" class="grid-container grid-container--crew flow">
     <h1 class="crew__header numbered-title"><span aria-hidden="true">02</span>Meet your crew</h1>
     
-    <div class="crew__dot dot-indicators flex">
-      <button aria-selected="true"></button>
-      <button aria-selected="false"></button>
-      <button aria-selected="false"></button>
-      <button aria-selected="false"></button>
+    <div class="crew__dot dot-indicators flex"  role="tablist" aria-label="crew list">
+      <button aria-selected="true" role="tab" tabindex="0" aria-controls="commander-tab" data-image="commander-image"></button>
+      <button aria-selected="false" role="tab" tabindex="-1" aria-controls="engineer-tab" data-image="engineer-image"></button>
+      <button aria-selected="false" role="tab" tabindex="-1" aria-controls="pilot-tab" data-image="pilot-image"></button>
+      <button aria-selected="false" role="tab" tabindex="-1" aria-controls="specialist-tab" data-image="specialist-image"></button>
     </div>
 
-    <picture class="crew__image">
+    <picture class="crew__image" id="commander-image">
       <source srcset="./assets/crew/image-douglas-hurley.webp" type="image/webp">
       <img src="./assets/crew/image-douglas-hurley.png" alt="">
     </picture>
 
-    <article class="crew__content flow">
+    <picture class="crew__image" id="engineer-image" hidden>
+      <source srcset="./assets/crew/image-anousheh-ansari.webp" type="image/webp">
+      <img src="./assets/crew/image-anousheh-ansari.png" alt="">
+    </picture>
+
+    <picture class="crew__image" id="pilot-image" hidden>
+      <source srcset="./assets/crew/image-victor-glover.webp" type="image/webp">
+      <img src="./assets/crew/image-victor-glover.png" alt="">
+    </picture>
+
+    <picture class="crew__image" id="specialist-image" hidden>
+      <source srcset="./assets/crew/image-mark-shuttleworth.webp" type="image/webp">
+      <img src="./assets/crew/image-mark-shuttleworth.png" alt="">
+    </picture>
+
+    <article class="crew__content flow" id="commander-tab" role="tabpanel">
       <header class="crew__content-title ff-serif uppercase flow">
         <h2 class="fs-600">Commander</h2>
         <p class="fs-700">Douglas Hurley</p>
       </header>
 
       <p class="fs-400 ff-sans-normal text-accent">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+    </article>
+
+    <article class="crew__content flow" id="engineer-tab" hidden role="tabpanel">
+      <header class="crew__content-title ff-serif uppercase flow">
+        <h2 class="fs-600">Flight Engineer</h2>
+        <p class="fs-700">Anousheh Ansari</p>
+      </header>
+
+      <p class="fs-400 ff-sans-normal text-accent">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+    </article>
+
+    <article class="crew__content flow" id="pilot-tab" hidden role="tabpanel">
+      <header class="crew__content-title ff-serif uppercase flow">
+        <h2 class="fs-600">Pilot</h2>
+        <p class="fs-700">Victor Glover</p>
+      </header>
+
+      <p class="fs-400 ff-sans-normal text-accent">Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
+    </article>
+
+    <article class="crew__content flow" id="specialist-tab" hidden role="tabpanel">
+      <header class="crew__content-title ff-serif uppercase flow">
+        <h2 class="fs-600">Mission Specialist</h2>
+        <p class="fs-700">Mark Shuttleworth</p>
+      </header>
+
+      <p class="fs-400 ff-sans-normal text-accent">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
     </article>
   </main>
 
