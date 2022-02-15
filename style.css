@@ -52,7 +52,6 @@ body {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -477,6 +476,8 @@ body {
 
 .destination__image {
   grid-area: image;
+  max-width: 60%;
+  align-self: center;
 }
 
 .destination__content {
